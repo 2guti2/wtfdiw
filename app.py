@@ -1,12 +1,19 @@
 import flask
 import flask_injector
 import injector
-
 import providers
+import importlib.util
+import os
+from config.configuration import ConfigurationModule
 
+if os.environ['FLASK_ENV'] == 'development':
+    spec = importlib.util.spec_from_file_location("development_vars.load_vars", "development_vars.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.load_vars(os)
 
 INJECTOR_DEFAULT_MODULES = dict(
-    redis_client=providers.AppProvidersModule(),
+    config=providers.AppProvidersModule(),
 )
 
 
@@ -26,12 +33,11 @@ def _configure_dependency_injection(
 
 
 def create_app(
-    *,
-    custom_injector: injector.Injector = None,
-    injector_modules=None,
+        *,
+        custom_injector: injector.Injector = None,
+        injector_modules=None,
 ):
     app = flask.Flask(__name__)
-    app.config.update({'test': 6379})
 
     @app.route('/')
     def hello_world():
@@ -39,8 +45,9 @@ def create_app(
 
     @injector.inject
     @app.route('/calculate')
-    def calculate(test: providers.Test):
-        return test.test()
+    def calculate(config: ConfigurationModule):
+        var = config.get_var('GOOGLE_CLIENT_ID')
+        return var if var is not None else 'None'
 
     _configure_dependency_injection(
         app, injector_modules, custom_injector)

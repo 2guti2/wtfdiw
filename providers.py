@@ -1,28 +1,23 @@
-import flask
-import flask_injector
 import injector
-
-
-class Test:
-    def __init__(self, msg):
-        self.msg = msg
-
-    def test(self):
-        return 'hello world ' + str(self.msg)
+import os
+from flask import Config
+from flask_injector import request
+from config.configuration import ConfigurationModule
 
 
 class AppProvidersModule(injector.Module):
 
     def configure(self, binder):
         binder.bind(
-            Test,
+            ConfigurationModule,
             to=self.create,
-            scope=flask_injector.request
+            scope=request
         )
 
     @injector.inject
     def create(
         self,
-        config: flask.Config,
-    ) -> 'Test':
-        return Test(config.get('test'))
+        config: Config,
+    ) -> ConfigurationModule:
+        return ConfigurationModule(config, os)
+

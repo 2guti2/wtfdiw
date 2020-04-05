@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1df27154-0f1a-4275-9158-ba2df56575b4" name="Default Changelist" comment="" />
+    <list default="true" id="1df27154-0f1a-4275-9158-ba2df56575b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.python-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/__tests__/test_configuration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/configuration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/__tests__/test_py_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/py_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/bin/set_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock-3.0.5.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock-3.0.5.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock-3.0.5.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock-3.0.5.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock-3.0.5.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock-3.0.5.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/mock/mock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/providers.py" beforeDir="false" afterPath="$PROJECT_DIR$/providers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +54,16 @@
     </expand>
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../materials" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZuqvqJwoS2iov9dW1DQaE5bMFX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,6 +77,169 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/config/__tests__" />
+      <recent name="$PROJECT_DIR$/helpers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flask server.wtfdiw">
+    <configuration name="test_loader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_loader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_suite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_suite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wtfdiw" type="Python.FlaskServer">
+      <option name="flaskDebug" value="true" />
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Env" type="ShConfigurationType">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/environment.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/environment.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_configuration.Configuration" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/config/__tests__" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_configuration.Configuration&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_py_functions.PyFunctions" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/helpers/__tests__" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_py_functions.PyFunctions&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in __tests__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/helpers/__tests__" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/helpers/__tests__&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_py_functions.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="wtfdiw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/helpers/__tests__" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/helpers/__tests__/test_py_functions.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.wtfdiw" />
+      <item itemvalue="Python.test_loader" />
+      <item itemvalue="Python tests.Unittests in __tests__ (1)" />
+      <item itemvalue="Python tests.Unittests for test_configuration.Configuration" />
+      <item itemvalue="Python tests.Unittests for test_py_functions.PyFunctions" />
+      <item itemvalue="Python tests.Unittests in test_py_functions.py" />
+      <item itemvalue="Shell Script.Env" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_loader" />
+        <item itemvalue="Python tests.Unittests in test_py_functions.py" />
+        <item itemvalue="Python tests.Unittests for test_py_functions.PyFunctions" />
+        <item itemvalue="Python tests.Unittests for test_configuration.Configuration" />
+        <item itemvalue="Python tests.Unittests in __tests__ (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -79,7 +273,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586006710475</updated>
-      <workItem from="1586006712919" duration="4048000" />
+      <workItem from="1586006712919" duration="18663000" />
     </task>
     <servers />
   </component>
@@ -87,26 +281,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1360" y="-182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586104028478">
+    <state x="-1117" y="-303" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586126189597">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state x="-1360" y="-182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586104028478" />
-    <state width="1292" height="286" key="GridCell.Tab.0.bottom" timestamp="1586104559357">
+    <state x="-1117" y="-303" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586126189597" />
+    <state x="-878" y="-58" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1586125093636">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state width="1292" height="286" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586104559357" />
-    <state width="1292" height="286" key="GridCell.Tab.0.center" timestamp="1586104559355">
+    <state x="-878" y="-58" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125093636" />
+    <state x="-1222" y="-93" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586125476731">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state width="1292" height="286" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586104559355" />
-    <state width="1292" height="286" key="GridCell.Tab.0.left" timestamp="1586104559353">
+    <state x="-1222" y="-93" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125476731" />
+    <state x="-905" y="-85" width="479" height="631" key="#com.intellij.tools.ToolEditorDialog" timestamp="1586125098191">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state width="1292" height="286" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586104559353" />
-    <state width="1292" height="286" key="GridCell.Tab.0.right" timestamp="1586104559356">
+    <state x="-905" y="-85" width="479" height="631" key="#com.intellij.tools.ToolEditorDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125098191" />
+    <state width="1876" height="373" key="GridCell.Tab.0.bottom" timestamp="1586126249945">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state width="1292" height="286" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586104559356" />
+    <state width="1876" height="373" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586126249945" />
+    <state width="1876" height="373" key="GridCell.Tab.0.bottom/0.23.1440.825/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125938850" />
+    <state width="1876" height="482" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586121584625" />
+    <state width="1876" height="373" key="GridCell.Tab.0.center" timestamp="1586126249943">
+      <screen x="-1920" y="-387" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="373" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586126249943" />
+    <state width="1876" height="373" key="GridCell.Tab.0.center/0.23.1440.825/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125938849" />
+    <state width="1876" height="482" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586121584623" />
+    <state width="1876" height="373" key="GridCell.Tab.0.left" timestamp="1586126249943">
+      <screen x="-1920" y="-387" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="373" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586126249943" />
+    <state width="1876" height="373" key="GridCell.Tab.0.left/0.23.1440.825/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125938848" />
+    <state width="1876" height="482" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586121584622" />
+    <state width="1876" height="373" key="GridCell.Tab.0.right" timestamp="1586126249944">
+      <screen x="-1920" y="-387" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="373" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586126249944" />
+    <state width="1876" height="373" key="GridCell.Tab.0.right/0.23.1440.825/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125938849" />
+    <state width="1876" height="482" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586121584624" />
     <state width="234" height="539" key="HiddenNamespacesPopup" timestamp="1586103969589">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
@@ -115,5 +329,28 @@
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
     <state x="-1451" y="-208" key="SettingsEditor/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586103478235" />
+    <state x="-769" y="-260" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1586125099730">
+      <screen x="-1920" y="-387" width="1920" height="1080" />
+    </state>
+    <state x="-769" y="-260" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125099730" />
+    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup" timestamp="1586110149677">
+      <screen x="-1920" y="-387" width="1920" height="1080" />
+    </state>
+    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586110149677" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in_config.coverage" NAME="Unittests in config Coverage Results" MODIFIED="1586118610507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in_test_configuration_py.coverage" NAME="Unittests in test_configuration.py Coverage Results" MODIFIED="1586118455687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_for_test_helper_MyTestCase_test_configuration_dict.coverage" NAME="Unittests for test_helper.MyTestCase.test_configuration_dict Coverage Results" MODIFIED="1586118240712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_for_test_py_functions_PyFunctions.coverage" NAME="Unittests for test_py_functions.PyFunctions Coverage Results" MODIFIED="1586120207040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helpers/__tests__" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in_tests.coverage" NAME="Unittests in tests Coverage Results" MODIFIED="1586119673922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/wtfdiw$tests.coverage" NAME="test_loader Coverage Results" MODIFIED="1586126021726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in___tests____1_.coverage" NAME="Unittests in __tests__ (1) Coverage Results" MODIFIED="1586120079745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helpers/__tests__" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_for_test_configuration_Configuration.coverage" NAME="Unittests for test_configuration.Configuration Coverage Results" MODIFIED="1586120187488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config/__tests__" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in___tests__.coverage" NAME="Unittests in __tests__ Coverage Results" MODIFIED="1586119168843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config/__tests__" />
+    <SUITE FILE_PATH="coverage/wtfdiw$test_suite.coverage" NAME="test_suite Coverage Results" MODIFIED="1586119125388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in_test_py_functions_py.coverage" NAME="Unittests in test_py_functions.py Coverage Results" MODIFIED="1586120209499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helpers/__tests__" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Flask.coverage" NAME="wtfdiw Coverage Results" MODIFIED="1586126244746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wtfdiw$Unittests_for_test_helper_MyTestCase.coverage" NAME="Unittests for test_helper.MyTestCase Coverage Results" MODIFIED="1586118231803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>
