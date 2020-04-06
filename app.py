@@ -2,15 +2,10 @@ import flask
 import flask_injector
 import injector
 import providers
-import importlib.util
-import os
+from environment import load_env_vars
 from config.configuration import ConfigurationModule
 
-if os.environ['FLASK_ENV'] == 'development':
-    spec = importlib.util.spec_from_file_location("development_vars.load_vars", "development_vars.py")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    module.load_vars(os)
+load_env_vars()
 
 INJECTOR_DEFAULT_MODULES = dict(
     config=providers.AppProvidersModule(),
