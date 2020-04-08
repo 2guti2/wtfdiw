@@ -1,2 +1,7 @@
-Create a file in the project root folder called `development_vars.py`.
-Then load it with the values of the vars explicited in `config/configuration` specifically in the variable `config_var_names`.
+```shell script
+openssl req -x509 -out localhost.crt -keyout localhost.key \         
+  -newkey rsa:2048 -nodes -sha256 \
+  -subj '/CN=localhost' -extensions EXT -config <( \
+   printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
+```
+

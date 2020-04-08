@@ -1,4 +1,14 @@
+werkzeug
 Flask==1.0.2
 Flask-Injector==0.10.1
 injector==0.14.1
 pytest==3.8.1
+Flask-SQLAlchemy>=0.8.0
+Flask-Script
+Flask-Migrate
+psycopg2-binary
+Flask-Login
+requests==2.21.0
+oauthlib==3.0.1
+pyOpenSSL==19.0.0
+Flask_Sslify

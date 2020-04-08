@@ -1,0 +1,36 @@
+version: '3'
+services:
+
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+      - "443:443"
+    environment:
+      FLASK_ENV: development
+      FLASK_APP: app.py
+      APP_SETTINGS: config.DevelopmentConfig
+      GOOGLE_CLIENT_ID: 452758247766-sisbc4uart9knl6jeihdn8rbgrjoadb5.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: KV-V0fvNHh1-ncG9CuYFFSWz
+      GOOGLE_DISCOVERY_URL: https://accounts.google.com/.well-known/openid-configuration
+      RDS_PORT: 5432
+      RDS_USERNAME: wtfdiw
+      RDS_PASSWORD: Passw0rd!
+      RDS_HOSTNAME: pg
+      RDS_DB_NAME: wtfdiw_development
+    volumes:
+      - .:/code
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: wtfdiw_development
+      POSTGRES_USER: wtfdiw
+      POSTGRES_PASSWORD: Passw0rd!
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
