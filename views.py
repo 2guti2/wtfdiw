@@ -3,7 +3,7 @@ import requests
 import json
 from flask import redirect, request, url_for
 from database import db
-from flask_login import UserMixin
+from user import User
 from flask.blueprints import Blueprint
 from login_manager import login_manager
 from oauthlib.oauth2 import WebApplicationClient
@@ -18,32 +18,6 @@ app_bp = Blueprint('/', __name__)
 login_bp = Blueprint('/login', __name__)
 logout_bp = Blueprint('/logout', __name__)
 client = WebApplicationClient(os.environ.get('GOOGLE_CLIENT_ID'))
-
-
-class User(db.Model, UserMixin):
-    __tablename__ = 'users'
-
-    id = db.Column(db.Float, primary_key=True)
-    name = db.Column(db.String())
-    email = db.Column(db.String())
-    profile_pic = db.Column(db.String())
-
-    def __init__(self, id_, name, email, profile_pic):
-        self.id = id_
-        self.name = name
-        self.email = email
-        self.profile_pic = profile_pic
-
-    def __repr__(self):
-        return '<id {}>'.format(self.id)
-
-    def serialize(self):
-        return {
-            'id': self.id,
-            'name': self.name,
-            'email': self.email,
-            'profile_pic': self.profile_pic
-        }
 
 
 @login_manager.unauthorized_handler
