@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1df27154-0f1a-4275-9158-ba2df56575b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wtfdiw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wtfdiw.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/__tests__/test_configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/__tests__/test_py_functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/py_functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/providers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/bf207ff51d2e_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/user.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +234,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in __tests__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="wtfdiw" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,7 +249,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_py_functions.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__/test_py_functions.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="wtfdiw" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -276,16 +269,16 @@
       <item itemvalue="Flask server.wtfdiw" />
       <item itemvalue="Python.test_suite" />
       <item itemvalue="Python.test_loader" />
-      <item itemvalue="Python tests.Unittests in __tests__" />
       <item itemvalue="Python tests.Unittests for test_configuration.Configuration" />
       <item itemvalue="Python tests.Unittests for test_py_functions.PyFunctions" />
-      <item itemvalue="Python tests.Unittests in test_py_functions.py" />
       <item itemvalue="Shell Script.Env" />
+      <item itemvalue="Python tests.Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__" />
+      <item itemvalue="Python tests.Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__/test_py_functions.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_loader" />
-        <item itemvalue="Python tests.Unittests in test_py_functions.py" />
+        <item itemvalue="Python tests.Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__/test_py_functions.py" />
         <item itemvalue="Python tests.Unittests for test_py_functions.PyFunctions" />
         <item itemvalue="Python tests.Unittests for test_configuration.Configuration" />
       </list>
@@ -296,7 +289,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -314,7 +312,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586006710475</updated>
       <workItem from="1586006712919" duration="36582000" />
-      <workItem from="1586313796005" duration="4187000" />
+      <workItem from="1586313796005" duration="8437000" />
     </task>
     <servers />
   </component>
@@ -387,10 +385,10 @@
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
     <state x="-769" y="-260" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125099730" />
-    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup" timestamp="1586297164677">
+    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup" timestamp="1586464951093">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586297164677" />
+    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586464951093" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in_config.coverage" NAME="Unittests in config Coverage Results" MODIFIED="1586118610507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
