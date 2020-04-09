@@ -3,7 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1df27154-0f1a-4275-9158-ba2df56575b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/login_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/60a6104a93a2_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +115,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/application" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/config/__tests__" />
-      <recent name="$PROJECT_DIR$/helpers" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.wtfdiw - docker">
@@ -308,7 +320,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586006710475</updated>
       <workItem from="1586006712919" duration="36582000" />
-      <workItem from="1586313796005" duration="9372000" />
+      <workItem from="1586313796005" duration="12347000" />
     </task>
     <servers />
   </component>
@@ -328,10 +340,11 @@
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
     <state x="-878" y="-58" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125093636" />
-    <state x="-1222" y="-93" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586217112090">
-      <screen x="-1920" y="-387" width="1920" height="1080" />
+    <state x="524" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586470559122">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1222" y="-93" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586217112090" />
+    <state x="524" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1586470559122" />
     <state x="-905" y="-85" width="479" height="631" key="#com.intellij.tools.ToolEditorDialog" timestamp="1586125098191">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>

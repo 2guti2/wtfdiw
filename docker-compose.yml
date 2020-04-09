@@ -8,7 +8,7 @@ services:
       - "443:443"
     environment:
       FLASK_ENV: development
-      FLASK_APP: app.py
+      FLASK_APP: wsgi
       APP_SETTINGS: config.DevelopmentConfig
       GOOGLE_CLIENT_ID: 452758247766-sisbc4uart9knl6jeihdn8rbgrjoadb5.apps.googleusercontent.com
       GOOGLE_CLIENT_SECRET: KV-V0fvNHh1-ncG9CuYFFSWz
@@ -18,6 +18,7 @@ services:
       RDS_PASSWORD: Passw0rd!
       RDS_HOSTNAME: pg
       RDS_DB_NAME: wtfdiw_development
+      PYTHONPATH: $PYTHONPATH:/code/wtfdiw
     volumes:
       - .:/code
     depends_on:

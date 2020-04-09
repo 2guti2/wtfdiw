@@ -2,10 +2,10 @@ import os
 import requests
 import json
 from flask import redirect, request, url_for
-from database import db
-from user import User
+from application.database import db
+from application.user import User
 from flask.blueprints import Blueprint
-from login_manager import login_manager
+from application.login_manager import login_manager
 from oauthlib.oauth2 import WebApplicationClient
 from flask_login import (
     current_user,
