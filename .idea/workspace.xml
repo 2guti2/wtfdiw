@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1df27154-0f1a-4275-9158-ba2df56575b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/login_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/60a6104a93a2_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,6 +197,12 @@
     <configuration name="wtfdiw - docker" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="services">
+            <list>
+              <option value="pg" />
+              <option value="web" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -279,9 +275,9 @@
       <item itemvalue="Python.test_loader" />
       <item itemvalue="Python tests.Unittests for test_configuration.Configuration" />
       <item itemvalue="Python tests.Unittests for test_py_functions.PyFunctions" />
-      <item itemvalue="Shell Script.Env" />
       <item itemvalue="Python tests.Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__" />
       <item itemvalue="Python tests.Unittests in /Users/mgutierrez/Git/wtfdiw/helpers/__tests__/test_py_functions.py" />
+      <item itemvalue="Shell Script.Env" />
     </list>
     <recent_temporary>
       <list>
@@ -302,6 +298,23 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="Compose: docker-compose.yml" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="Compose: docker-compose.yml" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="pg" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="Compose: docker-compose.yml" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="web" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -320,7 +333,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586006710475</updated>
       <workItem from="1586006712919" duration="36582000" />
-      <workItem from="1586313796005" duration="12347000" />
+      <workItem from="1586313796005" duration="15288000" />
     </task>
     <servers />
   </component>
@@ -328,10 +341,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1117" y="-303" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586216788914">
+    <state x="-1117" y="-303" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586476154799">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state x="-1117" y="-303" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586216788914" />
+    <state x="-1117" y="-303" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586476154798" />
     <state x="-1228" y="-47" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586301548152">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
@@ -349,10 +362,10 @@
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
     <state x="-905" y="-85" width="479" height="631" key="#com.intellij.tools.ToolEditorDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125098191" />
-    <state x="-723" y="-82" key="DockerComposeFileDialog" timestamp="1586216752442">
+    <state x="-723" y="-82" key="DockerComposeFileDialog" timestamp="1586476138537">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
-    <state x="-723" y="-82" key="DockerComposeFileDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586216752442" />
+    <state x="-723" y="-82" key="DockerComposeFileDialog/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586476138537" />
     <state width="1876" height="464" key="GridCell.Tab.0.bottom" timestamp="1586219775321">
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
@@ -394,10 +407,11 @@
       <screen x="-1920" y="-387" width="1920" height="1080" />
     </state>
     <state x="-769" y="-260" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586125099730" />
-    <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup" timestamp="1586464951093">
-      <screen x="-1920" y="-387" width="1920" height="1080" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1586474060300">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1295" y="-146" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-1920.-387.1920.1080@-1920.-387.1920.1080" timestamp="1586464951093" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586474060300" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wtfdiw$Unittests_in_config.coverage" NAME="Unittests in config Coverage Results" MODIFIED="1586118610507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />

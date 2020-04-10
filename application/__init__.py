@@ -2,18 +2,28 @@ import os
 from flask import Flask
 from application.login_manager import login_manager
 from application.database import db, migrate
-from application import views
+from application.views import blueprints
+
+
+def setup_config(app):
+    app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
+    app.config.from_object(os.environ['APP_SETTINGS'])
+
+
+def setup_db(app):
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+
+def setup_api(app):
+    for b in blueprints:
+        app.register_blueprint(b)
+    login_manager.init_app(app)
 
 
 def create_app():
-    new_app = Flask(__name__, instance_relative_config=False)
-    new_app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
-    new_app.config.from_object(os.environ['APP_SETTINGS'])
-    new_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-    db.init_app(new_app)
-    migrate.init_app(new_app, db)
-    new_app.register_blueprint(views.app_bp, url_prefix='')
-    new_app.register_blueprint(views.login_bp, url_prefix='')
-    new_app.register_blueprint(views.logout_bp, url_prefix='')
-    login_manager.init_app(new_app)
-    return new_app
+    app = Flask(__name__, instance_relative_config=False)
+    setup_config(app)
+    setup_db(app)
+    setup_api(app)
+    return app

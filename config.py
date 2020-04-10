@@ -12,6 +12,7 @@ class Config(object):
     RDS_HOSTNAME = environ.get('RDS_HOSTNAME')
     RDS_PORT = environ.get('RDS_PORT')
     RDS_DB_NAME = environ.get('RDS_DB_NAME')
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://{username}:{password}@{hostname}:{port}/{dbname}" \
         .format(username=RDS_USERNAME, password=RDS_PASSWORD, hostname=RDS_HOSTNAME, port=RDS_PORT, dbname=RDS_DB_NAME)
     GOOGLE_CLIENT_ID = environ.get('GOOGLE_CLIENT_ID')
