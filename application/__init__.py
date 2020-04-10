@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from application.login_manager import login_manager
+from application.user.login_manager import login_manager
 from application.database import db, migrate
 from application.views import blueprints
 
