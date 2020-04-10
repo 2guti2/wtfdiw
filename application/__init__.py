@@ -2,7 +2,7 @@ import os
 from flask import Flask
 from application.user.login_manager import login_manager
 from application.database import db, migrate
-from application.views import blueprints
+from application.controllers import blueprints
 
 
 def setup_config(app):
