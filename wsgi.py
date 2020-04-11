@@ -1,5 +1,6 @@
 from application import create_app
 import ssl
+import os
 from werkzeug import run_simple
 
 app = create_app()
@@ -9,4 +10,5 @@ if is_development:
     ctx.load_cert_chain('localhost.crt', 'localhost.key')
     run_simple('0.0.0.0', 5000, app, ssl_context=ctx)
 else:
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
