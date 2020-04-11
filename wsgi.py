@@ -2,6 +2,7 @@ from application import create_app
 import ssl
 from werkzeug import run_simple
 
+global heroku_app
 
 if __name__ == '__main__':
     app = create_app()
@@ -11,4 +12,5 @@ if __name__ == '__main__':
         ctx.load_cert_chain('localhost.crt', 'localhost.key')
         run_simple('0.0.0.0', 5000, app, ssl_context=ctx)
     else:
-        app.run()
+        heroku_app = app
+        heroku_app.run()
