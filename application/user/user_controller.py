@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+from flask import jsonify
 from flask import redirect, request, url_for
 from application.database import db
 from application.user.user_model import User
@@ -17,8 +18,15 @@ from flask_login import (
 app_bp = Blueprint('/', __name__)
 login_bp = Blueprint('/login', __name__)
 logout_bp = Blueprint('/logout', __name__)
+users_bp = Blueprint('/users', __name__)
 
 client = WebApplicationClient(os.environ.get('GOOGLE_CLIENT_ID'))
+
+
+@users_bp.route('/users', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    return jsonify([u.serialize() for u in users])
 
 
 @login_manager.unauthorized_handler
