@@ -22,6 +22,10 @@
         socket.on('server::redirect::' + clientId, function (redirectUrl) {
           console.log(redirectUrl);
         });
+
+        socket.on('server::user::' + clientId, function (user) {
+          console.log(user)
+        })
       });
     </script>
 </head>
