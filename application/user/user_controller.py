@@ -1,4 +1,5 @@
 import os
+import sys
 import requests
 import json
 from flask import jsonify
@@ -14,6 +15,7 @@ from flask_login import (
     login_user,
     logout_user,
 )
+from application.socketio import socket_io
 
 app_bp = Blueprint('/', __name__)
 login_bp = Blueprint('/login', __name__)
@@ -21,6 +23,11 @@ logout_bp = Blueprint('/logout', __name__)
 users_bp = Blueprint('/users', __name__)
 
 client = WebApplicationClient(os.environ.get('GOOGLE_CLIENT_ID'))
+
+
+@socket_io.on('my event')
+def handle_my_custom_event(data):
+    print('received json: ' + str(data), file=sys.stderr)
 
 
 @users_bp.route('/users', methods=['GET'])
