@@ -1,6 +1,5 @@
 import binascii
 import os
-import sys
 import requests
 import json
 from flask import (jsonify, request, current_app as app)
@@ -21,7 +20,6 @@ users_bp = Blueprint('/users', __name__)
 @socket_io.on('client::user::connected')
 def on_client_subscribe(data):
     client_id = data['id']
-    print('new client connected, client_id: ' + str(client_id), file=sys.stderr)
     google_provider_cfg = get_google_provider_cfg()
     authorization_endpoint = google_provider_cfg['authorization_endpoint']
 
@@ -75,8 +73,6 @@ def session_callback():
         id_=unique_id, name=users_name, email=users_email, profile_pic=picture
     )
 
-    response = user.serialize()
-
     db_user = User.query.filter_by(id=unique_id).first()
     exists = db_user is not None
     if not exists:
@@ -93,9 +89,9 @@ def session_callback():
         db.session.add(session)
         db.session.commit()
 
-    response = {**response, **session.serialize()}
-
+    response = {**user.serialize(), **session.serialize()}
     socket_io.emit('server::user::logged_in::' + client_id, response)
+
     return (
         '<script>window.close();</script>'
         '<p>Please close this tab</p>'
