@@ -16,6 +16,9 @@ from flask_login import (
     logout_user,
 )
 from application.socketio import socket_io
+from flask_socketio import emit
+
+clients = []
 
 app_bp = Blueprint('/', __name__)
 login_bp = Blueprint('/login', __name__)
@@ -25,9 +28,28 @@ users_bp = Blueprint('/users', __name__)
 client = WebApplicationClient(os.environ.get('GOOGLE_CLIENT_ID'))
 
 
-@socket_io.on('my event')
-def handle_my_custom_event(data):
-    print('received json: ' + str(data), file=sys.stderr)
+def build_callback_url(request):
+    base_url = request.base_url
+    split_url = base_url.split('/')
+    return 'https://' + split_url[2] + '/login/callback'
+
+
+@socket_io.on('client::subscribe')
+def on_client_subscribe(data):
+    client_id = data['id']
+    print('client_id: ' + str(client_id), file=sys.stderr)
+    google_provider_cfg = get_google_provider_cfg()
+    authorization_endpoint = google_provider_cfg['authorization_endpoint']
+
+    callback_url = build_callback_url(request)
+    request_uri = client.prepare_request_uri(
+        authorization_endpoint,
+        redirect_uri=callback_url,
+        scope=['openid', 'email', 'profile'],
+    )
+
+    print('request_uri: ' + str(request_uri), file=sys.stderr)
+    emit('server::redirect::' + client_id, request_uri)
 
 
 @users_bp.route('/users', methods=['GET'])

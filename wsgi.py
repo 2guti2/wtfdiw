@@ -16,7 +16,7 @@ if __name__ == '__main__':
         ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
         ctx.load_cert_chain('localhost.crt', 'localhost.key')
         run_simple(host, default_port, app, ssl_context=ctx)
-        socket_io.run(app)
+        # socket_io.run(app)
     else:
         port = int(os.environ.get('PORT', default_port))
         app.run(host=host, port=port)
