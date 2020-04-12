@@ -4,7 +4,7 @@ from application.database import db, migrate
 from application.controllers import blueprints
 from application.socketio import socket_io
 from flask_cors import CORS
-from application.user.oauth_client import oauth
+from application.user.auth.oauth_client import oauth
 
 
 def setup_config(app):
