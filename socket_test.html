@@ -17,13 +17,13 @@
 
       var socket = io('https://localhost:5000/');
       socket.on('connect', function () {
-        socket.emit('client::subscribe', {id: clientId});
+        socket.emit('client::user::connected', {id: clientId});
 
         socket.on('server::redirect::' + clientId, function (redirectUrl) {
           console.log(redirectUrl);
         });
 
-        socket.on('server::user::' + clientId, function (user) {
+        socket.on('server::user::logged_in::' + clientId, function (user) {
           console.log(user)
         })
       });

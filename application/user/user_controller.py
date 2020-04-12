@@ -1,14 +1,15 @@
+import binascii
 import os
 import sys
 import requests
 import json
-from flask import jsonify
-from flask import request
+from flask import (jsonify, request, current_app as app)
 from application.database import db
+from application.user.session_model import Session
 from application.user.user_model import User
-from flask.blueprints import Blueprint
-from oauthlib.oauth2 import WebApplicationClient
 from application.socketio import socket_io
+from application.user.oauth_client import oauth
+from flask.blueprints import Blueprint
 from flask_socketio import emit
 
 callback_uri = '/sessions/callback'
@@ -16,10 +17,8 @@ callback_uri = '/sessions/callback'
 sessions_bp = Blueprint('/sessions', __name__)
 users_bp = Blueprint('/users', __name__)
 
-client = WebApplicationClient(os.environ.get('GOOGLE_CLIENT_ID'))
 
-
-@socket_io.on('client::subscribe')
+@socket_io.on('client::user::connected')
 def on_client_subscribe(data):
     client_id = data['id']
     print('new client connected, client_id: ' + str(client_id), file=sys.stderr)
@@ -27,7 +26,7 @@ def on_client_subscribe(data):
     authorization_endpoint = google_provider_cfg['authorization_endpoint']
 
     callback_url = build_callback_url(request)
-    request_uri = client.prepare_request_uri(
+    request_uri = oauth.client.prepare_request_uri(
         authorization_endpoint,
         redirect_uri=callback_url,
         scope=['openid', 'email', 'profile'],
@@ -45,7 +44,7 @@ def session_callback():
     google_provider_cfg = get_google_provider_cfg()
     token_endpoint = google_provider_cfg['token_endpoint']
 
-    token_url, headers, body = client.prepare_token_request(
+    token_url, headers, body = oauth.client.prepare_token_request(
         token_endpoint,
         authorization_response=request.url,
         redirect_url=request.base_url,
@@ -55,13 +54,13 @@ def session_callback():
         token_url,
         headers=headers,
         data=body,
-        auth=(os.environ.get('GOOGLE_CLIENT_ID'), os.environ.get('GOOGLE_CLIENT_SECRET')),
+        auth=(app.config.get('GOOGLE_CLIENT_ID'), app.config.get('GOOGLE_CLIENT_SECRET')),
     )
 
-    client.parse_request_body_response(json.dumps(token_response.json()))
+    oauth.client.parse_request_body_response(json.dumps(token_response.json()))
 
     user_info_endpoint = google_provider_cfg['userinfo_endpoint']
-    uri, headers, body = client.add_token(user_info_endpoint)
+    uri, headers, body = oauth.client.add_token(user_info_endpoint)
     user_info_response = requests.get(uri, headers=headers, data=body)
 
     if user_info_response.json().get('email_verified'):
@@ -87,7 +86,16 @@ def session_callback():
         User.query.filter_by(id=unique_id).update(dict(id=unique_id, name=users_name, email=users_email, profile_pic=picture))
         db.session.commit()
 
-    socket_io.emit('server::user::' + client_id, response)
+    session = Session.query.filter_by(user_id=unique_id).first()
+    exists = session is not None
+    if not exists:
+        session = Session(user_id_=unique_id, token=generate_key(), expiration=None)
+        db.session.add(session)
+        db.session.commit()
+
+    response = {**response, **session.serialize()}
+
+    socket_io.emit('server::user::logged_in::' + client_id, response)
     return (
         '<script>window.close();</script>'
         '<p>Please close this tab</p>'
@@ -101,10 +109,14 @@ def get_users():
 
 
 def get_google_provider_cfg():
-    return requests.get(os.environ.get('GOOGLE_DISCOVERY_URL')).json()
+    return requests.get(app.config.get('GOOGLE_DISCOVERY_URL')).json()
 
 
 def build_callback_url(req):
     base_url = req.base_url
     split_url = base_url.split('/')
     return 'https://' + split_url[2] + callback_uri
+
+
+def generate_key():
+    return binascii.hexlify(os.urandom(20)).decode()
