@@ -3,14 +3,12 @@ class SessionService:
     @staticmethod
     def new_session(code, args):
         app, json, db, Session, User, OauthService, UserService, oauth, request, requests = args
-
         unique_id, users_name, users_email, picture = \
             OauthService.get_user_info_from_google(code, (app, json, oauth, request, requests))
 
         user_ins = UserService.create_or_update(db, User, (
             unique_id, users_name, users_email, picture
         ))
-
         session_ins = SessionService.create_or_update(db, Session, unique_id)
 
         return {**user_ins.serialize(), **session_ins.serialize()}
