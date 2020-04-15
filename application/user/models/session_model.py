@@ -1,6 +1,6 @@
 import binascii
 import os
-from application.database import db
+from application.factories.database import db
 
 
 class Session(db.Model):

@@ -18,3 +18,6 @@ class UserService:
             self.db.session.commit()
 
         return user_ins
+
+    def get_all(self):
+        return self.User.query.all()
