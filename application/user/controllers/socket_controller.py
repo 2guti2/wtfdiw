@@ -7,8 +7,8 @@ def configure_sockets():
     @socket_io.on('client::user::connected')
     def on_client_connected(data):
         client_id = data['id']
-        request_uri = get_redirect_url(client_id, callback_uri='/sessions/callback')
-        socket_io.emit('server::redirect::' + client_id, request_uri)
+        redirect_url = get_redirect_url(client_id, callback_uri='/sessions/callback')
+        socket_io.emit('server::redirect::' + client_id, redirect_url)
 
 
 def get_redirect_url(client_id, callback_uri):
