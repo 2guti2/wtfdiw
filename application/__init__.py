@@ -1,10 +1,10 @@
 import os
+from injector import Injector
 from flask import Flask
 from flask_injector import FlaskInjector
-from injector import Injector
+from flask_cors import CORS
 from application.app_module import AppModule
 from application.factories.socketio import socket_io
-from flask_cors import CORS
 from application.factories.oauth_client import oauth
 from application.user.controllers.session_controller import configure_session_views
 from application.user.controllers.user_controller import configure_user_views
