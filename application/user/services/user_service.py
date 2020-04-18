@@ -14,6 +14,7 @@ class UserService:
             self.db.session.add(user_ins)
             self.db.session.commit()
         else:
+            # TODO: this is not right
             self.User.query.filter_by(id=unique_id).update(user_ins.serialize())
             self.db.session.commit()
 

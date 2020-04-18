@@ -5,14 +5,15 @@ class GoogleService:
         self.oauth = oauth
         self.requests = requests
 
-    def get_user_info(self, code, request):
+    def get_user_info(self, code, request_info):
+        (url, base_url) = request_info
         google_provider_cfg = self.oauth.get_google_provider_cfg()
         token_endpoint = google_provider_cfg['token_endpoint']
 
         token_url, headers, body = self.oauth.client.prepare_token_request(
             token_endpoint,
-            authorization_response=request.url,
-            redirect_url=request.base_url,
+            authorization_response=url,
+            redirect_url=base_url,
             code=code,
         )
         token_response = self.requests.post(

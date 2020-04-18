@@ -27,3 +27,11 @@ class User(db.Model):
             'email': self.email,
             'profile_pic': self.profile_pic
         }
+
+    def json_serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'email': self.email,
+            'profilePic': self.profile_pic
+        }
