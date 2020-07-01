@@ -8,7 +8,7 @@ def configure_sockets():
     def on_client_connected(data):
         client_id = data['id']
         redirect_url = get_redirect_url(client_id, callback_uri='/sessions/callback')
-        socket_io.emit(f"server::redirect::{client_id}", redirect_url)
+        socket_io.emit(f'server::redirect::{client_id}', redirect_url)
 
 
 def get_redirect_url(client_id, callback_uri):
@@ -27,4 +27,4 @@ def get_redirect_url(client_id, callback_uri):
 def build_callback_url(req, callback_uri):
     base_url = req.base_url
     split_url = base_url.split('/')
-    return f"https://{split_url[2]}{callback_uri}"
+    return f'https://{split_url[2]}{callback_uri}'

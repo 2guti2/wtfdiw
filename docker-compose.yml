@@ -19,6 +19,8 @@ services:
       RDS_PASSWORD: Passw0rd!
       RDS_HOSTNAME: pg
       RDS_DB_NAME: wtfdiw_development
+      MOVIE_API_BASE_URL: https://api.themoviedb.org/3
+      MOVIE_API_KEY: 8adf3f49948fc809e928e509c90d99a1
     volumes:
       - .:/code
     depends_on:

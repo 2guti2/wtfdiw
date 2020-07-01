@@ -18,6 +18,8 @@ class Config(object):
     GOOGLE_CLIENT_ID = environ.get('GOOGLE_CLIENT_ID')
     GOOGLE_CLIENT_SECRET = environ.get('GOOGLE_CLIENT_SECRET')
     GOOGLE_DISCOVERY_URL = environ.get('GOOGLE_DISCOVERY_URL')
+    MOVIE_API_BASE_URL = environ.get('MOVIE_API_BASE_URL')
+    MOVIE_API_KEY = environ.get('MOVIE_API_KEY')
 
 
 class ProductionConfig(Config):

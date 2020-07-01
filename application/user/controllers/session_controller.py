@@ -13,7 +13,7 @@ def configure_session_views(app):
         request_info = (request.url, request.base_url)
 
         response = session_service.new_session(code, request_info)
-        socket_io.emit(f"server::user::logged_in::{client_id}", response)
+        socket_io.emit(f'server::user::logged_in::{client_id}', response)
 
         return (
             '<script>window.close();</script>'
